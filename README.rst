@@ -5,9 +5,6 @@ molecular descriptor calculator.
 .. image:: https://travis-ci.org/mordred-descriptor/mordred.svg?branch=master
     :target: https://travis-ci.org/mordred-descriptor/mordred
 
-.. image:: https://ci.appveyor.com/api/projects/status/iwk6268d27jusvni/branch/master?svg=true
-    :target: https://ci.appveyor.com/project/philopon/mordred/branch/master
-
 .. image:: https://coveralls.io/repos/github/mordred-descriptor/mordred/badge.svg?branch=master
     :target: https://coveralls.io/github/mordred-descriptor/mordred?branch=master
 
@@ -24,6 +21,9 @@ molecular descriptor calculator.
 .. image:: https://img.shields.io/badge/doi-10.1186%2Fs13321--018--0258--y-blue.svg
    :target: https://doi.org/10.1186/s13321-018-0258-y
 
+.. image:: https://img.shields.io/badge/slack-mordred--descriptor-brightgreen.svg
+    :target: https://join.slack.com/t/mordred-descriptor/shared_invite/enQtMzc1MzkyODk1NTY5LTdlYzM4MWUzY2YwZmEwMWYzN2M4YTVkMGRlMDY0ZjU2NjQ1M2RiYzllMzVjZGE4NGZkNWZjODBjODE0YmExNjk
+
 number of descriptors
 ---------------------
 .. code:: python
@@ -32,10 +32,7 @@ number of descriptors
     >>> n_all = len(Calculator(descriptors, ignore_3D=False).descriptors)
     >>> n_2D = len(Calculator(descriptors, ignore_3D=True).descriptors)
     >>> print("2D:    {:5}\n3D:    {:5}\n------------\ntotal: {:5}".format(n_2D, n_all - n_2D, n_all))
-    2D:     1681
-    3D:      482
-    ------------
-    total:  2163
+
 
 Installation
 ------------
@@ -61,7 +58,14 @@ pip
 
        .. code:: console
 
+           $ pip install 'mordred[full]'  # install with extra requires
+           # or
            $ pip install mordred
+           
+Testing the installation
+------------------------
+
+            $ python -m mordred.tests
 
 examples
 --------
@@ -188,7 +192,7 @@ as library
     2    1.2688
     Name: SLogP, dtype: float64
 
-see `examples <examples>`_
+see `examples <https://github.com/mordred-descriptor/mordred/tree/develop/examples>`_
 
 Citation
 --------
