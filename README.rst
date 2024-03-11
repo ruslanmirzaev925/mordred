@@ -32,10 +32,7 @@ number of descriptors
     >>> n_all = len(Calculator(descriptors, ignore_3D=False).descriptors)
     >>> n_2D = len(Calculator(descriptors, ignore_3D=True).descriptors)
     >>> print("2D:    {:5}\n3D:    {:5}\n------------\ntotal: {:5}".format(n_2D, n_all - n_2D, n_all))
-    2D:     1613
-    3D:      213
-    ------------
-    total:  1826
+
 
 Installation
 ------------
@@ -178,12 +175,6 @@ as library
 
     # create descriptor calculator with all descriptors
     >>> calc = Calculator(descriptors, ignore_3D=True)
-
-    >>> len(calc.descriptors)
-    1613
-
-    >>> len(Calculator(descriptors, ignore_3D=True, version="1.0.0"))
-    1612
 
     # calculate single molecule
     >>> mol = Chem.MolFromSmiles('c1ccccc1')

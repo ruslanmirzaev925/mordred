@@ -95,6 +95,7 @@ class Valence(AdjacencyMatrix):
 
 class DistanceMatrix3D(Descriptor):
     __slots__ = ("explicit_hydrogens", "useAtomWts")
+    since = "1.0.0"
 
     require_3D = True
 
